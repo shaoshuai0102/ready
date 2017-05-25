@@ -1,4 +1,3 @@
-'use strict';
 
 const IS_READY = Symbol('isReady');
 const READY_CALLBACKS = Symbol('readyCallbacks');
@@ -68,7 +67,7 @@ class Ready {
     if (this[IS_READY]) {
       this[READY_CALLBACKS]
         .splice(0, Infinity)
-        .forEach(callback => process.nextTick(() => callback(this[READY_ARG])));
+        .forEach(callback => setTimeout(() => callback(this[READY_ARG])));
     }
   }
 
@@ -87,6 +86,6 @@ function mixin(object) {
   Ready.mixin(object);
 }
 
-module.exports = mixin;
-module.exports.mixin = mixin;
-module.exports.Ready = Ready;
+export default mixin;
+mixin.mixin = mixin;
+mixin.Ready = Ready;

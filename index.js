@@ -1,7 +1,5 @@
 'use strict';
 
-const is = require('is-type-of');
-
 const IS_READY = Symbol('isReady');
 const READY_CALLBACKS = Symbol('readyCallbacks');
 const READY_ARG = Symbol('readyArg');
@@ -15,7 +13,7 @@ class Ready {
 
   ready(flagOrFunction) {
     // register a callback
-    if (flagOrFunction === undefined || is.function(flagOrFunction)) {
+    if (flagOrFunction === undefined || typeof flagOrFunction === 'function') {
       return this.register(flagOrFunction);
     }
     // emit callbacks

@@ -6,9 +6,6 @@
   "files": [
     "index.js"
   ],
-  "dependencies": {
-    "is-type-of": "^1.0.0"
-  },
   "engines": {
     "node": ">= 4.0.0"
   },

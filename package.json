@@ -1,6 +1,6 @@
 {
-  "name": "get-ready",
-  "version": "2.0.1",
+  "name": "get-ready-browser",
+  "version": "1.0.0",
   "description": "mixin to add one-time ready event callback handler",
   "main": "lib/index.js",
   "files": [

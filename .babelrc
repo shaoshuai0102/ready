@@ -3,6 +3,7 @@
     "es2015-ie"
   ],
   "plugins": [
+    "transform-runtime",
     "add-module-exports"
   ]
 }

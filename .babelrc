@@ -1,9 +1,8 @@
 {
   "presets": [
-    "es2015-ie"
+    "env"
   ],
   "plugins": [
-    "transform-runtime",
-    "add-module-exports"
+    "transform-runtime"
   ]
 }
